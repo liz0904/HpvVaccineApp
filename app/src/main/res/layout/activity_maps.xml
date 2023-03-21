@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="572dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:background="@drawable/background"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/Hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/atitlegothic3"
+                    android:text="내 주변 병원 찾아보기"
+                    android:textColor="@color/backgroundGray"
+                    android:textSize="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/rectangle"
+                    android:scrollbarSize="40dp"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="위치 직접 입력" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rectangle"
+                    tools:ignore="ExtraText">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/rectangle"
+                        tools:context=".MapsActivity"
+                        tools:ignore="ExtraText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/rectangle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textHosName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/atitlegothic3"
+                    android:text="연세사랑모아여성병원      621m"
+                    android:textColor="@color/purple_700"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/textHosAddress"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:gravity="center"
+                    android:text="서울특별시 구로구 고척2동 중앙로 100"
+                    android:textColor="@color/textColor"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view3"
+                    app:layout_constraintStart_toStartOf="@+id/view3"
+                    app:layout_constraintTop_toBottomOf="@+id/textHosName" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCall1"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:text="전화걸기"
+                    android:textColor="@color/backgroundGray"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btnHomepage1"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:text="홈페이지"
+                    android:textColor="@color/backgroundGray"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view31"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/rectangle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textHosName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/atitlegothic3"
+                    android:text="민전산부인과의원      576m"
+                    android:textColor="@color/purple_700"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/textHosAddress1"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:gravity="center"
+                    android:text="서울특별시 구로구 개봉동 경인로 322"
+                    android:textColor="@color/textColor"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view3"
+                    app:layout_constraintStart_toStartOf="@+id/view3"
+                    app:layout_constraintTop_toBottomOf="@+id/textHosName" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCall2"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:text="전화걸기"
+                    android:textColor="@color/backgroundGray"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btnHomepage2"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:text="홈페이지"
+                    android:textColor="@color/backgroundGray"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view312"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/rectangle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textHosName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/atitlegothic3"
+                    android:text="구로성심병원      882m"
+                    android:textColor="@color/purple_700"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/textHosAddress2"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:gravity="center"
+                    android:text="서울특별시 구로구 고척동 76-189"
+                    android:textColor="@color/textColor"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="@+id/view3"
+                    app:layout_constraintStart_toStartOf="@+id/view3"
+                    app:layout_constraintTop_toBottomOf="@+id/textHosName" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCall3"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:text="전화걸기"
+                    android:textColor="@color/backgroundGray"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/btnHomepage3"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/atitlegothic2"
+                    android:text="홈페이지"
+                    android:textColor="@color/backgroundGray"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/infoBtn4"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/syringe_ck"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/hospitalBtn4" />
+
+    <Button
+        android:id="@+id/hospitalBtn4"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/hospital_ck"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/homeBtn4" />
+
+    <Button
+        android:id="@+id/questBtn4"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/chat_ck"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/infoBtn4" />
+
+    <Button
+        android:id="@+id/homeBtn4"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/home_ck"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginBottom="8dp"
+        android:text="홈"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="8dp"
+        android:text="정보"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="8dp"
+        android:text="자주묻는질문"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="8dp"
+        android:text="병원"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

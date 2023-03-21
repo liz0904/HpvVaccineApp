@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textContents1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="35dp"
+
+        android:fontFamily="@font/atitlegothic2"
+        android:text="가다실®은 HPV*감염에 의한 자궁경부암, 외음부암, 질암(여성 해당), 항문암 및 생식기 사마귀 등을 예방할 수 있으며, 성별 관계 없이 남녀 모두 접종할 수 있는 HPV 백신입니다. \n가다실®은만 9-26세 남녀 모두 접종 가능한 국내 유일 4가 HPV 백신이며, 10년 이상 장기 임상 연구를 통해 지속적인 예방 효과를 입증하였습니다. "
+        android:textSize="12dp"
+        android:lineSpacingExtra="1.5dp"
+        android:textColor="@color/textColor"
+        android:layout_marginLeft="20dp"
+       />
+
+</LinearLayout>
